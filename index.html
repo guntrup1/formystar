@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Начало</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rowdies:wght@300;400;700&display=swap"
+		rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div id="mobile-message">Солнышко, попробуй зайти с ноутбука 😉</div>
+	<div id="desktop-content">
+		<div id="swup" class="transition-fade">
+			<div id="main">
+				<div class="/preloader" id="preloaders">
+					<div class="full-screen_body">
+						<div class="preloader-content">
+							<div class="preloader-text">
+								<div id="line1"></div>
+								<div id="line2"></div>
+								<div id="line3"></div>
+								<img class="mable" src="../img/png/pig.png" alt="Описание картинки"
+									style="max-width: 100%; height: auto;">
+							</div>
+							<button id="start-btn" style="display: none;">возьми меня за руку</button>
+
+						</div>
+					</div>
+					<video autoplay muted loop class="full-screen_video">
+						<source src="./img/preloader-video.webm" type="video/webm">
+						<source src="./img/preloader-video.mp4" type="video/mp4">
+					</video>
+
+				</div>
+
+				<div id="main-content" class='block1'>
+					<audio loop id="nightfire" src="./img/sound/nightfire.mp3"></audio>
+					<audio id="openbook" src="./img/sound/openbook.mp3"></audio>
+					<audio id="putbook" src="./img/sound/putbook.mp3"></audio>
+					<img id="dairy" class="dairy" src="./img/png/dairy.png">
+					<img id="note" class="note" src="./img/png/note.png">
+					<div id="sandwich_receipt">
+						<p id='sandwich_receipt_linkbutton' class="sandwich_receipt_linkbutton">Готово ;3</p>
+						<img src="./img/png/sendwich_receipt.png">
+					</div>
+
+					<div id="ex_list" class="toggle-element">
+						<img class="background_dairy-in-hands" src="./img/png/hands_with_dayri.png">
+						<div class="form-container">
+							<p class="form-container_tittle">СПИСОК СЧАСТЬЯ</p>
+							<div class="ex_list-wrapper">
+								<label class="ex_list-item custom-checkbox">
+									<span id='sendwich-receipt_link'
+										class="sanwich_link sendwich-receipt_link">Перекусить
+										сендвичем мечты </span>
+								</label>
+								<label class="ex_list-item">
+									<span class="sanwich_link flower_link">Пособирать волшебные цветы</span>
+								</label>
+								<label class="ex_list-item custom-checkbox">
+
+
+									<span class="sanwich_link"><strike>Найти свою любовь</strike></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="custom-overlay" id="customOverlay">
+						<div class="custom-message-box">
+							<p id="customAnimatedText"></p>
+							<a id='navigateButton' class="go-to-field-button go-to-field-button_href "
+								href="./field.html" id="goToFieldButton" style="text-decoration: none;">Пойти на
+								полянку</a>
+						</div>
+					</div>
+
+
+					<div id='hands_with_dayri_paper' class="hands_with_dayri_paper toggle-element">
+						<img src="./img/png/hands_with_dayri_paper.png">
+					</div>
+					<div id="dairy_form" class="hands_with_dayri toggle-element">
+						<img src="./img/png/hands_with_dayri.png" alt="Hands with Dairy">
+						<div class="form-container">
+							<h2>Форма проверки</h2>
+							<form id="checkForm">
+								<div class="form-group">
+									<input type="date" id="date" placeholder="Дата" required>
+								</div>
+								<div class="form-group">
+									<input type="text" id="nickname" placeholder="Ласковое имя" required>
+								</div>
+								<div class="form-group">
+									<input type="password" id="pin" placeholder="Пинкод" required>
+								</div>
+								<button type="submit" class="check-button">ПОДПИСАТЬ</button> <!-- Кнопка с классом -->
+							</form>
+						</div>
+					</div>
+
+					<video autoplay muted loop class="full-screen_video_block1">
+						<source src="./img/video/block1.webm" type="video/webm">
+					</video>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+</body>
+
+</html>

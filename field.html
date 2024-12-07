@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Поле с цветочками</title>
+	<link rel="stylesheet" href="css/style_field.css">
+</head>
+
+<body>
+	<div id="swup" class="transition-fade">
+		<div id="video-preloader">
+			<video id="preloader-video" src="./img/video/sunrice.mp4" muted></video>
+		</div>
+
+		<div class="field_wrapper">
+			<div id="dialogueBox">
+				<div id="bulbasaurName">БульбаЗавр</div>
+				<div id="dialogueText"></div> <!-- Здесь текст будет "печататься" -->
+				<button id="nextButton">Идет</button> <!-- Кнопка "Идет" -->
+			</div>
+
+
+
+			<img id="characterImage" src="./img/png/bullbull_fotoalbum.png" alt="Зверенок" /> <!-- Картинка зверенка -->
+
+			<img id="notebookImage" src="./img/png/fotoalbum.png" alt="Блокнот" /> <!-- Картинка блокнота -->
+			<div class="pzzles_wrappers">
+				<img class="pazzles_fon" src="./img/png/fotoalbum_fon.png">
+				<div class="pazzles">
+					<div class="container">
+						<div class="puzzle-container" id="puzzle-container">
+							<div class="puzzle-slot" id="slot1"></div>
+							<div class="puzzle-slot" id="slot2"></div>
+							<div class="puzzle-slot" id="slot3"></div>
+							<div class="puzzle-slot" id="slot4"></div>
+							<div class="puzzle-slot" id="slot5"></div>
+							<div class="puzzle-slot" id="slot6"></div>
+							<div class="puzzle-slot" id="slot7"></div>
+							<div class="puzzle-slot" id="slot8"></div>
+							<div class="puzzle-slot" id="slot9"></div>
+						</div>
+
+						<div class="pieces-container" id="pieces-container">
+							<!-- Кусочки пазла будут сгенерированы скриптом -->
+
+						</div>
+					</div>
+					<div class="pazzles_btn">
+						<button id="reset">Сброс</button>
+						<button id="check" disabled>Проверить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/script_field.js"></script>
+
+</body>
+
+</html>
