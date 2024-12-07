@@ -1,0 +1,333 @@
+/* Define a transition duration during page visits */
+html.is-changing .transition-fade {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+@font-face {
+    font-family: 'Segoe Print';
+    src: url('./fonts/segoepr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../img/fons/flowers_fild.jpg') no-repeat center center/cover;
+    font-family: 'Segoe Print', sans-serif !important;
+    z-index: 1;
+}
+
+.flower {
+    position: absolute;
+    cursor: pointer;
+    transition: opacity 1s ease;
+    width: 100px;
+    height: 100px;
+}
+
+#nextButton {
+    display: none;
+    margin-top: 45px !important;
+    margin-left: 200px !important;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    background-color: #ff9d9c;
+    border: none;
+    font-size: 24px;
+    color: #ffe9e9;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s ease, background-color 0.5s;
+
+}
+
+#nextButton:hover {
+    background-color: #e47472;
+    color: #ffbdbd;
+}
+
+#dialogueBox {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 400px;
+    padding: 20px 20px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 1s ease;
+    height: 350px;
+}
+
+#bulbasaurName {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #28ce90;
+}
+
+#dialogueText {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#characterImage {
+    display: none;
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+    width: 300px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#notebookImage {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 300px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.pzzles_wrappers {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%) translateY(100%);
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+    z-index: 99;
+}
+
+.pazzles_fon {
+    width: 1400px;
+}
+
+.pazzles {
+    position: absolute;
+    top: 160px;
+    left: 360px;
+    z-index: 99;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pieces-container,
+.puzzle-container {
+    width: 300px;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #ff9d9c !important;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid #ff9d9c;
+    border-radius: 8px;
+    box-shadow: inset 0 0 17px #00000080;
+    grid-column-gap: 15px;
+}
+
+.puzzle-container,
+.pieces-container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    margin: 20px;
+    background-color: #6b6faf;
+    border-radius: 5px;
+}
+
+.puzzle-slot {
+    width: 70px;
+    height: 70px;
+    background-color: #212124a3;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(217, 217, 217, 0.1019607843);
+    border-radius: 8px;
+    box-shadow: inset 0 0 17px #00000080;
+}
+
+.puzzle-piece {
+    width: 70px;
+    height: 70px;
+    cursor: grab;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #212124a3;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(217, 217, 217, 0.1019607843);
+    border-radius: 8px;
+    box-shadow: inset 0 0 17px #00000080;
+}
+
+.hidden {
+    display: none;
+}
+
+.pazzles_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+.pazzles_btn button {
+    background-color: #e47472 !important;
+    color: #ffbdbd !important;
+    padding: 10px;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#reset {
+    margin-left: 130px;
+}
+
+#check {
+    margin-right: 110px;
+}
+
+.notification {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.notification.show {
+    bottom: 120%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification.hide {
+    bottom: -100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#error-message {
+    position: fixed;
+    bottom: 20px;
+    right: -300px;
+    background-color: #6b6faf;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+}
+
+#success-button {
+    padding: 25px;
+    background-color: #6b6faf;
+    border-radius: 25px;
+    color: #fff;
+    border: 1px solid #4b4f91;
+    font: inherit;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+    animation: shadow 1s ease infinite;
+}
+
+#success-button:hover {
+    background-color: #4b4f91;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(55, 141, 250, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(55, 141, 250, 0);
+    }
+}
+
+
+/* Стили для прелоадера */
+#video-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 9999;
+    /* Устанавливаем высокий z-index */
+    transition: opacity 1s ease;
+    /* Плавное исчезновение */
+}
+
+/* Стили для видео */
+#preloader-video {
+    width: 100%;
+    height: auto;
+}
+
+/* Скрыть основной контент по умолчанию */
+#filed_wrapper {
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* Плавное появление */
+}
